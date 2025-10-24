@@ -26,6 +26,8 @@ Backing up `Apocalypse\Current` at 20:15 on Oct 20 2025 →
 
 ## 🚀 How to Use
 
+> ⚠️ Make sure your pause your game before running the script. Otherwise, weird things may happen when you restore it!
+
 After installation, open the **Start Menu** → type **“Zomboid Save Scum”** → hit Enter.
 
 You’ll see something like:
