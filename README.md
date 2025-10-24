@@ -89,9 +89,9 @@ The installer and script only modify files inside your own user profile.
 ## 🚀 Installation (2 minutes)
 
 1. Download the installer:  
-   👉 [**Download install_savescum.bat**](https://github.com/morkohl/project_zomboid_savescum/raw/main/install_savescum.bat)
+   👉 [**Download install_savescum.bat from the Release page**](https://github.com/morkohl/project_zomboid_savescum/releases)
 
-2. Double-click it.
+2. Double-click the file `install_savescum.bat` after download.
 
 3. It will:
    - Check that your Zomboid save folder exists.  
