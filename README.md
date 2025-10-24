@@ -53,12 +53,6 @@ The util will now backup the save `Current` which you played in the game mode `A
 
 ---
 
-Excellent finishing touch — a proper README should show both **how to save** *and* **how to unsave your mistakes.**
-
-Here’s a small, self-contained section you can append to the bottom of your existing README:
-
----
-
 ## 🔁 Restoring a Backup
 
 Need to undo an unfortunate zombie encounter? No problem — backups are just normal folders.
@@ -80,9 +74,6 @@ Each time you run Save Scum, a timestamped copy of your selected save is created
 * Windows 10 or 11
 * PowerShell (built-in, version 5 or newer)
 * An existing `Zomboid\Saves` directory (just run the game once)
-
-No admin rights required.
-The installer and script only modify files inside your own user profile.
 
 ---
 
@@ -126,12 +117,7 @@ You're done.
 
 ## 🔒 Safety & Transparency
 
-This project is **fully open source**.
-You can read every line of both the PowerShell and installer scripts.
-They don’t collect data, change settings, or do anything beyond copying files.
-
-SmartScreen may warn you when you run the `.bat` — this is normal for unsigned scripts.
-Click **“More info → Run anyway.”**
+SmartScreen may warn you when you run the `.bat` — this is normal for unsigned scripts. Click that you trust the publisher.
 
 ---
 
