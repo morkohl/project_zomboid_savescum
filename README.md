@@ -2,10 +2,9 @@
 
 **Save responsibly. Scum efficiently.**
 
-This is a tiny PowerShell utility that automates **Project Zomboid save-backups** — a polite way of saying it helps you *save scum* without shame or tedious file copying.  
-You get a neat numbered menu of your save worlds, pick one, and it clones the selected save into a timestamped backup folder.  
-
-It’s simple, local, and designed for people who’d rather survive the apocalypse *their way*.
+A tiny Windows tool that automatically backs up your **Project Zomboid** saves — no mods, no configs, no shame.  
+Pick your save from a simple menu, and it clones it into a timestamped backup folder.  
+Because sometimes you just want to *un-die*.
 
 ---
 
@@ -13,122 +12,99 @@ It’s simple, local, and designed for people who’d rather survive the apocaly
 
 When you run **Zomboid Save Scum**, it:
 
-1. Finds your Project Zomboid save directory (usually `C:\Users\<you>\Zomboid\Saves`).
-2. Lists all saves by mode and name (e.g. `Apocalypse\MySave`, `Builder\MySave`, etc.).
-3. Lets you pick one by number.
-4. Creates a backup inside `Zomboid\Saves\Backups` of your save directory, automatically timestamped.
-   - This means if you want to backup the save `MySave` in the game mode `Apocalypse`
-   - The backup will be located at `Zomboid\Saves\Backups\Apocalypse\MySave_20-10-2025_20-15` (given you backup on the 20.10.2025 at 20:15)
-6. Copies the selected save there using PowerShell’s native file copy.
+1. Finds your Zomboid save directory (`C:\Users\<you>\Zomboid\Saves`).
+2. Lists all your saves (e.g. `Apocalypse\Current`, `Builder\MyBase`).
+3. Lets you choose one by number.
+4. Copies that save into  
+   `Zomboid\Saves\Backups\<gamemode>\<save>_<timestamp>`  
 
-## 
+Example:  
+Backing up `Apocalypse\Current` at 20:15 on Oct 20 2025 →  
+`Zomboid\Saves\Backups\Apocalypse\Current_20-10-2025_20-15`
 
 ---
 
-## 🧩 Example Usage
+## 🚀 How to Use
 
-Go to the **Windows Start Menu** (Windows Button) and type `Zomboid Save Backup`. 
+After installation, open the **Start Menu** → type **“Zomboid Save Scum”** → hit Enter.
 
-If the installation was successfull, the app should have been found.
-
-Run it.
-
-Running it will prompt you to select a save:
+You’ll see something like:
 
 ```
+
 [0] Apocalypse\Current
 [1] Apocalypse\Old
 [2] Builder\Current
 
-Please select the save you want to backup: 
-```
-
-You type:
+Please select the save you want to backup:
 
 ```
-0
-```
 
-The util will now backup the save `Current` which you played in the game mode `Apocalypse`
+Type a number, press **Enter**, and your backup is created.
 
 ---
 
 ## 🔁 Restoring a Backup
 
-Need to undo an unfortunate zombie encounter? No problem — backups are just normal folders.
+Backups are just normal folders — no magic.
 
-Each time you run Save Scum, a timestamped copy of your selected save is created in:
+1. Go to  
+   `C:\Users\<you>\Zomboid\Saves\Backups\`
+2. Open the folder of the backup you want (e.g. `Apocalypse\Current_24-10-2025_22-15`).
+3. Copy its contents.
+4. Paste them back into  
+   `C:\Users\<you>\Zomboid\Saves\Apocalypse\Current`
+5. Start the game — you’re back where you left off (or before you got eaten).
 
-`C:\Users<you>\Zomboid\Saves\Backups\`
-
-### 🪄 To restore:
-
-1. Open the **Backups** folder.
-2. Find the backup you want to restore (e.g. `Apocalypse\Current_24-10-2025_22-15`).
-3. Copy that folder’s contents.
-4. Paste them back into your active save directory, replacing the existing files:
-5. Start Project Zomboid — your restored world will load as it was at that moment in time.
+---
 
 ## ⚙️ Requirements
 
-* Windows 10 or 11
-* PowerShell (built-in, version 5 or newer)
-* An existing `Zomboid\Saves` directory (just run the game once)
+- Windows 10 or 11  
+- PowerShell 5 or newer (already included)  
+- A `Zomboid\Saves` folder — just start the game once
 
 ---
 
-## 🚀 Installation (2 minutes)
+## 🧩 Installation
 
 1. Download the installer:  
-   👉 [**Download install_savescum.bat from the Release page**](https://github.com/morkohl/project_zomboid_savescum/releases)
+   👉 [**Get install_savescum.bat from the Release page**](https://github.com/morkohl/project_zomboid_savescum/releases)
 
-2. Double-click the file `install_savescum.bat` after download.
+2. Double-click `install_savescum.bat`.
 
-3. It will:
-   - Check that your Zomboid save folder exists.  
-   - Download `SaveScum.ps1` and `savescum.ico`.  
-   - Create a **Start Menu shortcut** called **“Zomboid Save Scum”**.
+It will:
+- Check your Zomboid save folder exists.  
+- Download the PowerShell script and icon.  
+- Add a **Start Menu shortcut** called **“Zomboid Save Scum.”**
 
-4. When finished, open your **Start Menu**, type “Zomboid Save Scum”, and run it like any app.
-
-> ⚠️ If you’ve never run Project Zomboid before, open it once first — the save directory must exist before installation.
+> ⚠️ If the save folder doesn’t exist, start the game once and rerun the installer.
 
 ---
 
-## 🧹 Uninstalling
+## 🧹 Uninstall
 
-Want to repent your scumming ways?
+Delete these files:
 
-1. Delete:
+```
+C:\Users\<you>\Zomboid\Saves\SaveScum.ps1
+C:\Users\<you>\Zomboid\Saves\savescum.ico
+%AppData%\Microsoft\Windows\Start Menu\Programs\Zomboid Save Scum.lnk
+```
 
-   ```
-   C:\Users\<you>\Zomboid\Saves\SaveScum.ps1
-   C:\Users\<you>\Zomboid\Saves\savescum.ico
-   ```
-2. Delete the shortcut:
-
-   ```
-   %AppData%\Microsoft\Windows\Start Menu\Programs\Zomboid Save Scum.lnk
-   ```
-
-You're done.
+That’s it. You're done
 
 ---
 
-## 🔒 Safety & Transparency
+## 🔒 Safety
 
-SmartScreen may warn you when you run the `.bat` — this is normal for unsigned scripts. Click that you trust the publisher.
+SmartScreen might warn you the first time — that’s normal for unsigned scripts.  
+You can safely click **“More info → Run anyway.”**
 
----
-
-## 🧙 Author’s Note
-
-This isn’t a cheat — it’s *temporal insurance*.
-If you’ve ever tripped over a zombie and lost 40 hours of progress, you understand.
-SaveScum doesn’t judge you. It just quietly keeps a record of your better decisions.
+Everything runs locally; it just copies files.
 
 ---
 
 ## 🪪 License
 
-MIT License — because you should be as free to back up your saves as the undead are to eat your face.
+MIT License — because your saves deserve the same freedom as your bad decisions.
