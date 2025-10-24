@@ -27,6 +27,12 @@ When you run **Zomboid Save Scum**, it:
 
 ## 🧩 Example Usage
 
+Go to the **Windows Start Menu** (Windows Button) and type `Zomboid Save Backup`. 
+
+If the installation was successfull, the app should have been found.
+
+Run it.
+
 Running it will prompt you to select a save:
 
 ```
@@ -46,6 +52,28 @@ You type:
 The util will now backup the save `Current` which you played in the game mode `Apocalypse`
 
 ---
+
+Excellent finishing touch — a proper README should show both **how to save** *and* **how to unsave your mistakes.**
+
+Here’s a small, self-contained section you can append to the bottom of your existing README:
+
+---
+
+## 🔁 Restoring a Backup
+
+Need to undo an unfortunate zombie encounter? No problem — backups are just normal folders.
+
+Each time you run Save Scum, a timestamped copy of your selected save is created in:
+
+`C:\Users<you>\Zomboid\Saves\Backups\`
+
+### 🪄 To restore:
+
+1. Open the **Backups** folder.
+2. Find the backup you want to restore (e.g. `Apocalypse\Current_24-10-2025_22-15`).
+3. Copy that folder’s contents.
+4. Paste them back into your active save directory, replacing the existing files:
+5. Start Project Zomboid — your restored world will load as it was at that moment in time.
 
 ## ⚙️ Requirements
 
