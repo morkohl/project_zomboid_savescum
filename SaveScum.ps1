@@ -1,4 +1,4 @@
-$SavesRoot = "C:\Users\<your_user>\Zomboid\Saves"
+$SavesRoot = "$Home\Zomboid\Saves"
 $BackupsRoot = Join-Path $SavesRoot "Backups"
 $Timestamp = (Get-Date).ToString("dd-MM-yyyy_HH-mm")
 
@@ -24,12 +24,12 @@ Write-Host "<- Source: $Source"
 Write-Host "-> Destination: $Destination"
 Write-Host 
 
-Write-Host "=== Starting Backup ==="
+Write-Host "Starting Backup"
 
 Copy-Item $Source $Destination -Recurse -Force
 
 Write-Host 
-Write-Host "=== Backup Complete ==="
+Write-Host "Backup Complete"
 Write-Host 
 
 Read-Host "Press Enter to exit"
