@@ -9,24 +9,6 @@ It’s simple, local, and designed for people who’d rather survive the apocaly
 
 ---
 
-## 🚀 Installation (2 minutes)
-
-1. Download the installer:  
-   👉 [**Download install_zomboid_savescum.bat**](https://github.com/morkohl/project_zomboid_savescum/raw/main/install_zomboid_savescum.bat)
-
-2. Double-click it.
-
-3. It will:
-   - Check that your Zomboid save folder exists.  
-   - Download `SaveScum.ps1` and `savescum.ico`.  
-   - Create a **Start Menu shortcut** called **“Zomboid Save Scum”**.
-
-4. When finished, open your **Start Menu**, type “Zomboid Save Scum”, and run it like any app.
-
-> ⚠️ If you’ve never run Project Zomboid before, open it once first — the save directory must exist before installation.
-
----
-
 ## 🧠 What It Does
 
 When you run **Zomboid Save Scum**, it:
@@ -76,6 +58,24 @@ The installer and script only modify files inside your own user profile.
 
 ---
 
+## 🚀 Installation (2 minutes)
+
+1. Download the installer:  
+   👉 [**Download install_zomboid_savescum.bat**](https://github.com/morkohl/project_zomboid_savescum/raw/main/install_zomboid_savescum.bat)
+
+2. Double-click it.
+
+3. It will:
+   - Check that your Zomboid save folder exists.  
+   - Download `SaveScum.ps1` and `savescum.ico`.  
+   - Create a **Start Menu shortcut** called **“Zomboid Save Scum”**.
+
+4. When finished, open your **Start Menu**, type “Zomboid Save Scum”, and run it like any app.
+
+> ⚠️ If you’ve never run Project Zomboid before, open it once first — the save directory must exist before installation.
+
+---
+
 ## 🧹 Uninstalling
 
 Want to repent your scumming ways?
@@ -93,17 +93,6 @@ Want to repent your scumming ways?
    ```
 
 You're done.
-
----
-
-## ⚙️ Requirements
-
-* Windows 10 or 11
-* PowerShell (built-in, version 5 or newer)
-* An existing `Zomboid\Saves` directory (just run the game once)
-
-No admin rights required.
-The installer and script only modify files inside your own user profile.
 
 ---
 
