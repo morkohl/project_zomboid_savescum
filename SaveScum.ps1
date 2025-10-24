@@ -12,6 +12,7 @@ for ($i = 0; $i -lt $dirs.Count; $i++) {
     $rel = $dirs[$i].FullName.Substring($SavesRoot.Length).TrimStart('\')
     Write-Host "[$i] $rel"
 }
+Write-Host
 
 $sel = Read-Host "Please select the save you want to backup"
 
@@ -24,12 +25,12 @@ Write-Host "<- Source: $Source"
 Write-Host "-> Destination: $Destination"
 Write-Host 
 
-Write-Host "Starting Backup"
+Write-Host "=== Starting Backup ==="
 
 Copy-Item $Source $Destination -Recurse -Force
 
 Write-Host 
-Write-Host "Backup Complete"
+Write-Host "=== Backup Complete ==="
 Write-Host 
 
 Read-Host "Press Enter to exit"
