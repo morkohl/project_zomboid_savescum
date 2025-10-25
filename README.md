@@ -2,21 +2,17 @@
 
 **Save responsibly. Scum efficiently.**
 
-A Windows App that automatically back up your **Project Zomboid** saves.
-Pick your save from a simple menu, and it clones it into a timestamped backup folder.  
-Because sometimes you just want to make sure you can *un-die*.
+A simple **Powershell** helper for **Windows** to easily save and restore your Project Zomboid save games.
 
 ---
 
 ## 🧠 What It Does
 
-When you run **Zomboid Save Scum**, it:
+When you run **Zomboid Save Scum** you can do some actions:
 
-1. Finds your Zomboid save folder (`C:\Users\<you>\Zomboid\Saves`).
-2. Lists all your saves.
-3. Lets you choose one by number.
-4. Copies that save into  
-   `C:\Users\<you>\Zomboid\Saves\Backups\<gamemode>\<save>_<timestamp>`  
+1. backup latest save - backup your latest save game
+3. backup a save - backup one of your saves
+4. restore a backup - restore a save by choosing one of your backups to restore
 
 ---
 
@@ -26,51 +22,45 @@ When you run **Zomboid Save Scum**, it:
 
 After installation, open the **Start Menu** → type **“Zomboid Save Scum”** → hit Enter.
 
-You’ll see something like:
+You’ll see something the main menu:
 
-```
+<img width="709" height="518" alt="image" src="https://github.com/user-attachments/assets/fc41aea2-d35a-4e2f-82d6-b1dc8f1a3429" />
 
-[0] Apocalypse\Current
-[1] Apocalypse\Old
-[2] Builder\Current
+In this example, I want to backup my latest save. So I press `0` for the prompt and press `Enter`.
 
-Please select the save you want to backup:
+Next, I get asked if I want to proceed. I also get displayed some helpful information about the save itself.
 
-```
+<img width="703" height="374" alt="image" src="https://github.com/user-attachments/assets/700ca13b-42ac-4bfc-ba7b-6f4c02fcb03d" />
 
-The output shows the menu number, game mode and save name of the save.
+If I want to continue, I press `y`. If I don't, I press `n`. If I want to go back to the main menu I press `b`. If I want to quit, I press `q`.
 
-`[0] Apocalypse\Current`
-> Save -> `Current` in Game mode -> `Apocalypse`
-
-Type a number, press **Enter**, and your backup is created.
-
-### Example
-
-Putting in the number `0` and pressing enter will backup your save `Apocalypse\Current`to the following folder:
-
-`Zomboid\Saves\Backups\Apocalypse\Current_20-10-2025_20-15`
-
-Assuming it was started af 20:15 on Oct 20 2025 (20-10-2025_20-15).
+This is the gist of the UI. The rest should be self explanatory. Go ahead and try it!
 
 ---
 
 ## 🔁 Restoring a Backup
 
-In Project Zomboid, a save is contained inside a folder. That means we can just copy the backup folder into our game mode saves.
+In order to restore one of your backups, open the **Start Menu** → type **“Zomboid Save Scum”** → hit Enter.
 
-1. Go to  
-   `C:\Users\<you>\Zomboid\Saves\Backups\`
-2.  Selext the folder of the backup you want (e.g. `Apocalypse\Current_20-10-2025_20-15`).
-3. Copy the folder
-4. Paste the folder into  
-   `C:\Users\<you>\Zomboid\Saves\Apocalypse`
+In the main menu, press `2` (restore a backup), then hit `Enter`.
 
-You're done and you can keep on playing!
+You will see a game mode selection. Select the game mode you want to restore a backup from (in this case `Apocalypse` -> `0`, then `Enter`).
 
-> Make sure you copy it into the correct game mode save folder.
+<img width="702" height="421" alt="image" src="https://github.com/user-attachments/assets/fc4a32d1-e938-458f-aabd-24163f3f5bbd" />
 
----
+Next, you will see all backups that exist for that game mode. 
+
+The options displayed show the original file name and the time it was created at.
+
+<img width="378" height="203" alt="image" src="https://github.com/user-attachments/assets/c35309fc-591c-4732-822e-885e523dd90a" />
+
+Select the backup you want to restore (in this case `Current` -> `0`, then `Enter`).
+
+Next, Save Scum will show you what it will do and will ask you to proceed.
+
+If you want to continue, I press `y`. If I don't, I press `n`. If I want to go back to the main menu I press `b`. If I want to quit, I press `q`.
+
+<img width="893" height="416" alt="image" src="https://github.com/user-attachments/assets/9f7e71ec-9fbb-40a8-8ab3-5d09a5670701" />
 
 ## ⚙️ Requirements
 
@@ -78,6 +68,10 @@ You're done and you can keep on playing!
 - A `Zomboid\Saves` folder — just start the game once
 
 ---
+
+## Future Updates and Roadmap
+
+- Will add a cleanup feature in the future to remove old backups by different cleanup modes
 
 ## 🧩 Installation
 
