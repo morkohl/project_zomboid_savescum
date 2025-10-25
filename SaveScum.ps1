@@ -31,7 +31,10 @@ function Banner($action="") {
     Write-Host "░ ▓██▄   ▒██  ▀█▄   ▓██  █▒░▒███      ░ ▓██▄   ▒▓█    ▄ ▓██  ▒██░▓██    ▓██░"
     Write-Host "  ▒   ██▒░██▄▄▄▄██   ▒██ █░░▒▓█  ▄      ▒   ██▒▒▓▓▄ ▄██▒▓▓█  ░██░▒██    ▒██ "
     Write-Host "▒██████▒▒ ▓█   ▓██▒   ▒▀█░  ░▒████▒   ▒██████▒▒▒ ▓███▀ ░▒▒█████▓ ▒██▒   ░██▒"
-    if ($action) { Write-Host "`n🧭  action : $action`n" }
+    Write-Host 
+    Write-Host "⚠️ Please pause (or exit) Project Zomboid to prevent save corruption! ⚠️"
+    Write-Host
+    if ($action) { Write-Host "`n🧭 action -> $action`n" }
 }
 
 function Confirm-Proceed($prompt) {
@@ -48,9 +51,9 @@ function Confirm-Proceed($prompt) {
 }
 
 function Show-Menu($title, $options, [switch]$AllowBack) {
-    Write-Host ""
+    Write-Host 
     Write-Host "📋  $title"
-    Write-Host ""
+    Write-Host 
     for ($i=0; $i -lt $options.Count; $i++) {
         $o = $options[$i]
         Write-Host ("[{0}] {1}" -f $i, $o.Label)
@@ -60,7 +63,7 @@ function Show-Menu($title, $options, [switch]$AllowBack) {
     }
     if ($AllowBack) { Write-Host "[b] back to main menu" }
     Write-Host "[q] quit"
-    Write-Host ""
+    Write-Host
 
     while ($true) {
         $sel = Read-Host "👉  select an option"
@@ -294,9 +297,9 @@ function Flow-BackupLatest {
 while ($true) {
     Banner "main menu"
     $main = @(
-        [pscustomobject]@{ Label="🚀 backup latest save"; Detail="duplicate your most recently modified save" },
-        [pscustomobject]@{ Label="🧠 backup a save";      Detail="choose a save and duplicate it into backups" },
-        [pscustomobject]@{ Label="💀 restore a backup";   Detail="copy a backup back to saves as *_restored" }
+        [pscustomobject]@{ Label="🚀 backup latest save"; Detail="backup the save that you last played" },
+        [pscustomobject]@{ Label="🧠 backup a save";      Detail="backup one of your saves" },
+        [pscustomobject]@{ Label="💀 restore a backup";   Detail="restore a save by choosing one of your backups" }
     )
     $pick = Show-Menu "available actions" $main
     switch ($pick) {
