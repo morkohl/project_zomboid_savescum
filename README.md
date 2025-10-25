@@ -8,31 +8,34 @@ A simple **Powershell** helper for **Windows** to easily save and restore your P
 
 ## 🧠 What It Does
 
-When you run **Zomboid Save Scum** you can do some actions:
+When you run **Zomboid Save Scum** you can run the following actions:
 
 1. backup latest save - backup your latest save game
-3. backup a save - backup one of your saves
-4. restore a backup - restore a save by choosing one of your backups to restore
+2. backup a save - backup one of your saves
+3. restore a backup - restore a save by choosing one of your backups to restore
 
 ---
 
 ## 🚀 How to Use
 
-> ⚠️ Make sure your pause your game before running the script. Otherwise, the backup might become inconsistent to actual game state or invalidate your save!
+> ⚠️ Make sure your pause your game before running the script. Otherwise, your saves might become inconsistent or invalidated when you run an acion on a save game!
 
 After installation, open the **Start Menu** → type **“Zomboid Save Scum”** → hit Enter.
 
-You’ll see something the main menu:
+You will see the main menu.
 
 <img width="709" height="518" alt="image" src="https://github.com/user-attachments/assets/fc41aea2-d35a-4e2f-82d6-b1dc8f1a3429" />
 
-In this example, I want to backup my latest save. So I press `0` for the prompt and press `Enter`.
+In this example, I want to backup my latest save. So I press `0` on the prompt and press `Enter`.
 
-Next, I get asked if I want to proceed. I also get displayed some helpful information about the save itself.
+Next, Save Scum will display some helpful information and ask what you want do next.
 
 <img width="703" height="374" alt="image" src="https://github.com/user-attachments/assets/700ca13b-42ac-4bfc-ba7b-6f4c02fcb03d" />
 
-If I want to continue, I press `y`. If I don't, I press `n`. If I want to go back to the main menu I press `b`. If I want to quit, I press `q`.
+If you press `y`, the action will proceed. 
+If you don't want to proceed with the action, press `n`.
+If you want to go back to the main menu, press`b`.
+If you want to quit, press `q`.
 
 This is the gist of the UI. The rest should be self explanatory. Go ahead and try it!
 
@@ -50,7 +53,7 @@ You will see a game mode selection. Select the game mode you want to restore a b
 
 Next, you will see all backups that exist for that game mode. 
 
-The options displayed show the original file name and the time it was created at.
+Save Scum will display some helpful information about the existing backups.
 
 <img width="378" height="203" alt="image" src="https://github.com/user-attachments/assets/c35309fc-591c-4732-822e-885e523dd90a" />
 
@@ -58,7 +61,10 @@ Select the backup you want to restore (in this case `Current` -> `0`, then `Ente
 
 Next, Save Scum will show you what it will do and will ask you to proceed.
 
-If you want to continue, I press `y`. If I don't, I press `n`. If I want to go back to the main menu I press `b`. If I want to quit, I press `q`.
+If you press `y`, the action will proceed. 
+If you don't want to proceed with the action, press `n`.
+If you want to go back to the main menu, press`b`.
+If you want to quit, press `q`.
 
 <img width="893" height="416" alt="image" src="https://github.com/user-attachments/assets/9f7e71ec-9fbb-40a8-8ab3-5d09a5670701" />
 
